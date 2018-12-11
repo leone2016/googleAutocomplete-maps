@@ -1,3 +1,8 @@
+
+CURSO
+===================
+![](https://github.com/leone2016/googleAutocomplete-maps/blob/master/default.png?raw=true)
+
 #### Páginas consultadas 
 [angular.material](https://material.angular.io/components/input/examples)
 
@@ -5,6 +10,7 @@
 
 [google.autocomplete](https://hackernoon.com/custom-directives-in-angular-6-building-a-google-places-autocomplete-4b418ee674ce)
 
+[errores](https://stackoverflow.com/questions/36064697/how-to-install-typescript-typings-for-google-maps/42733315?noredirect=1#comment88303107_42733315)
 >ng g module material --flat
 
 >ng g c components/mapa --module=app.module --spec=false 
