@@ -1,27 +1,30 @@
-# GoogleSearchMap
+#### Páginas consultadas 
+[angular.material](https://material.angular.io/components/input/examples)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+[angular.maps](https://angular-maps.com/api-docs/agm-core/components/agmmap#mapClick)
 
-## Development server
+[google.autocomplete](https://hackernoon.com/custom-directives-in-angular-6-building-a-google-places-autocomplete-4b418ee674ce)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+>ng g module material --flat
 
-## Code scaffolding
+>ng g c components/mapa --module=app.module --spec=false 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+>npm install @agm/core --save  [More info ... ](https://angular-maps.com/guides/getting-started/)
 
-## Build
+> ng g c components/mapa/mapa-editar --flat --spec=false --module=app.module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> ng g d components/mapa/google-places --module=app.module
 
-## Running unit tests
+> npm i --save-dev @types/googlemaps
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Pasos para utilizar el autocomplete de google 
+Paso 1: obtener una api key de google para maps [aquí](https://cloud.google.com/maps-platform/), en la versión actual solicita una terjeta de credido o debito para poder utilizar los servicios de google, es recomendable ingresar una tarjeta de debito cualquiera, solo para poder obtener el api key de google
 
-## Running end-to-end tests
+Paso 2: npm i --save-dev @types/googlemaps
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Paso 3: crear una directiva  
 
-## Further help
+> Cannot find name 'require'  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+npm install --save-dev @types/googlemaps
+
