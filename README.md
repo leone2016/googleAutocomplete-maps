@@ -90,7 +90,33 @@ Module not found: Error: Can't resolve '@types/googlemaps' in 'C:\Users\User\Doc
  @ multi webpack-dev-server/client?http://localhost:4400 ./src/main.ts
 
 ```
+  * ir al directorio node_modules/@types/googlemaps/index.d.ts
+  * agregar lo siguiente ``` declare module 'googlemaps'; ``` 
+  * en la directiva aumentar  ````import {} from 'googlemaps';```` y quedaría de esta forma
+  ```TS
+  import { Directive } from '@angular/core';
+  // const google = require('@types/googlemaps');
+  import {} from 'googlemaps';
+  @Directive({
+    selector: '[google-place]'
+  })
+  export class GooglePlacesDirective {
+  
+      private element: HTMLInputElement;
+  
+      constructor(private elRef: ElementRef) {
+          //elRef will get a reference to the element where
+          //the directive is placed
+          this.element = elRef.nativeElement;
+      }
+  
+      ngOnInit() {
+          const autocomplete = new google.maps.places.Autocomplete(this.element);
+      }
+  
+  }
 
+  ```
 
 
 
